@@ -53,11 +53,29 @@ jobs:
         comparison-method: contains
         timeout: 1
         max-score: 3
+    - name: Test 4
+      id: test-4
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test 4
+        setup-command: g++ ./Tests/test4.cpp -o ./test4
+        command: "./test4"
+        input: |-
+          7
+          2
+          n
+        expected-output: |-
+          Probability of winning is 0.0476
+          Odds of winning are 1 in 21
+        comparison-method: contains
+        timeout: 1
+        max-score: 3
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST-1_RESULTS: "${{steps.test-1.outputs.result}}"
         TEST-2_RESULTS: "${{steps.test-2.outputs.result}}"
         TEST-3_RESULTS: "${{steps.test-3.outputs.result}}"
+        TEST-4_RESULTS: "${{steps.test-4.outputs.result}}"
       with:
-        runners: test-1,test-2,test-3
+        runners: test-1,test-2,test-3,test-4
