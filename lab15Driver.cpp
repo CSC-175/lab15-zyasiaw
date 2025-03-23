@@ -2,7 +2,7 @@
 // when the user's set of numbers match the set drawn
 // by the lottery organizers. It uses three functions.
 # include <iostream>
-# include "./Lab15.cpp"
+# include "./lab15.cpp"
 using namespace std;
 
 int main()
