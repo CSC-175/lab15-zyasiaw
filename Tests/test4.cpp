@@ -1,4 +1,4 @@
-#include "../lab15Functions.cpp"
+#include "../lab15.cpp"
 
 int main(){
   int pickFrom, // The number of numbers to pick from
