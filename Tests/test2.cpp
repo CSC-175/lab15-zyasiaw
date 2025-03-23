@@ -1,4 +1,4 @@
-#include "../lab15Functions.cpp"
+#include "../lab15.cpp"
 
 int main(){
   std::cout << factorial(0) << " " << factorial(1) << " " << factorial(7) << std::endl;
